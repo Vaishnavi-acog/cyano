@@ -19,9 +19,9 @@ const db = new sqlite3.Database('./cyano.db', sqlite3.OPEN_READWRITE, (err)=>{
 
 app.use(bodyParser.json())
 
-app.get("/", (req, res)=>{
-    res.render("home")
-})
+// app.get("/", (req, res)=>{
+//     res.render("home")
+// })
 app.post("/cyano", (req, res)=>{
     try {
         // console.log(req.body.quote)
