@@ -22,7 +22,7 @@ app.use(bodyParser.json())
 app.get("/", (req, res)=>{
     res.render("home")
 })
-app.post("/movie", (req, res)=>{
+app.post("/cyano", (req, res)=>{
     try {
         // console.log(req.body.quote)
         const {name, proteome, pfam} = req.body;
@@ -41,7 +41,7 @@ app.post("/movie", (req, res)=>{
     }
 })
 
-app.get("/movie", (req, res)=>{
+app.get("/cyano", (req, res)=>{
 sql = "SELECT * FROM cyano WHERE proteome LIKE 'UP000002483%' ";
 try {
     db.all(sql,[], (err, row)=>{
